@@ -12,15 +12,15 @@ class Dog
     @@all
   end
 
-  def self.print_all
-    @@all.each { |i| puts "#{i.name}"}
-  end
-
   def save
     @@all << self
   end
 
+  def self.print_all
+    self.all.each { |i| puts "#{i.name}"}
+  end
+
   def self.clear_all
-    @@all.clear
+    self.all.clear
   end
 end
